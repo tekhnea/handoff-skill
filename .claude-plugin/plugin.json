@@ -1,0 +1,10 @@
+{
+  "name": "handoff",
+  "version": "1.1.0",
+  "description": "Writes a handoff note so the next person or AI session can pick up your work without re-reading the chat.",
+  "author": { "name": "Tekhnea", "url": "https://tekhnea.com" },
+  "homepage": "https://github.com/tekhnea/handoff-skill",
+  "repository": "https://github.com/tekhnea/handoff-skill",
+  "license": "MIT",
+  "keywords": ["handoff", "context", "notes", "agent-skills"]
+}

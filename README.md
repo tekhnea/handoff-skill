@@ -16,17 +16,26 @@ It keeps the note under about 300 words, links to files instead of pasting them,
 
 ## Install
 
-It's a standard [Agent Skill](https://agentskills.io): one folder with a `SKILL.md`.
+It's a standard [Agent Skill](https://agentskills.io): one folder with a `SKILL.md` (in `skills/handoff/`).
 
-**Claude Code.** Copy the `handoff` folder into `~/.claude/skills/` (for all your projects) or into `.claude/skills/` in one project:
+**Claude Code** (as a plugin, gets updates):
+
+```
+/plugin marketplace add tekhnea/handoff-skill
+/plugin install handoff@tekhnea
+```
+
+**Any tool the `skills` CLI supports** (Claude Code, Cursor, Codex and others):
 
 ```bash
-git clone https://github.com/tekhnea/handoff-skill && cp -R handoff-skill/handoff ~/.claude/skills/
+npx skills add tekhnea/handoff-skill
 ```
+
+**By hand.** Copy `skills/handoff` into your tool's skills folder, for example `~/.claude/skills/` for Claude Code.
 
 **Claude (claude.ai and the desktop app).** Download `handoff.zip` from the [latest release](https://github.com/tekhnea/handoff-skill/releases/latest) and upload it in Claude's skills settings (code execution must be on).
 
-**ChatGPT, Codex, Cursor and other tools that support Agent Skills.** Add the `handoff` folder (or the zip) wherever that tool loads skills from. If a tool doesn't support skills, paste the contents of `handoff/SKILL.md` into its custom instructions or rules.
+**ChatGPT and other tools.** If your tool supports Agent Skills, add the `handoff` folder or the zip there. If it doesn't, paste the contents of `skills/handoff/SKILL.md` into its custom instructions or rules.
 
 ## Why we made it
 
